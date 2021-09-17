@@ -40,4 +40,4 @@ RUN sudo apt-get update && \
         wget \
         xdg-utils && \
     sudo rm -rf /var/lib/apt/lists/*
-   RUN sudo npm install jest --global
+   RUN bash -c ". ~/.nvm/nvm-lazy.sh && npm install jest --global
