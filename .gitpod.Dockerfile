@@ -40,3 +40,4 @@ RUN sudo apt-get update && \
         wget \
         xdg-utils && \
     sudo rm -rf /var/lib/apt/lists/*
+    sudo npm install jest --global
