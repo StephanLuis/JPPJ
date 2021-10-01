@@ -1,3 +1,5 @@
+// nonfunctional
+
 const puppeteer = require('puppeteer');
 
 let _browser;

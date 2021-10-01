@@ -1,3 +1,6 @@
+// testing strategy has changed so that publishing bundles 
+// is not required
+
 const puppeteer = require('puppeteer');
 
 (async () => {

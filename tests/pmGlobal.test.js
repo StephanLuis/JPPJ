@@ -1,9 +1,17 @@
+
+// use reflect from demo/PMinstance.test.js to help with reporting 
+// on objects
+
+const puppeteer = require('puppeteer');
+
+(async () => {
+
 const puppeteer = require('puppeteer');
 
 const browser = await puppeteer.launch();
 
 const page = await browser.newPage();
-await page.goto('http://practisemaster.com/demos/VimeoDomLockLinks.html');
+await page.goto('https://8000-purple-gibbon-iek8tox3.ws-eu18.gitpod.io/dist/puppeteerPMogg.html');
 
 // var  pml = await page.evaluate(() => pmHelpers.p);
 
@@ -12,7 +20,7 @@ await page.goto('http://practisemaster.com/demos/VimeoDomLockLinks.html');
 
  await new Promise(r => setTimeout(r, 5000));
 
-var    pml = await page.evaluate(() => PMinstance_playerLI.loop);
+var    pml = await page.evaluate(() => PMinstance_player.loop);
    
 
 
@@ -31,3 +39,4 @@ propArray.forEach(element => console.log(element));
 console.log('bob');
 
 await browser.close();
+})();

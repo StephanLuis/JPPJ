@@ -1,3 +1,6 @@
+// will have to update events on 'all good' from PractiseMaster
+// test url below 
+ 
  'use strict';
 
  const puppeteer = require('puppeteer');
@@ -19,7 +22,13 @@ await page.evaluateOnNewDocument(() => {
   });
 });
 
-await page.goto('https://puppet.azurewebsites.net/puppeteer/soEvntSingle.html');
-// await page.waitFor(3000);
+// await page.goto('https://8000-purple-gibbon-iek8tox3.ws-eu18.gitpod.io/dist/puppeteerPMogg.html');
+ await page.goto('https://puppet.azurewebsites.net/puppeteer/soEvntSingle.html');
+
+
+// await page.screenshot({ path: 'screenshot.png' });
+
+// await page.waitFor(5000);
+
  await browser.close();
  })();

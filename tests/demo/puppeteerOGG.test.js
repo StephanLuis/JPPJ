@@ -1,3 +1,8 @@
+// screenshot demo
+
+// testing strategy has changed so that publishing bundles 
+// is not required
+
 const puppeteer = require('puppeteer');
 (async () => {
 const browser = await puppeteer.launch();
