@@ -11,13 +11,9 @@ const puppeteer = require('puppeteer');
   
   // page.on('requestfailed', request => { console.log(request.failure().errorText, request.url); }); 
   
-  page.on('requestfailed', request => {
-    console.log(`url: ${request.url()}, errText: ${request.failure().errorText}, method: ${request.method()}`)
-});
   
-  await page.goto('https://practisemaster.com/demos/puppeteerBrowserError5.html');
+  await page.goto('https://8000-purple-gibbon-iek8tox3.ws-eu18.gitpod.io/dist/puppeteerPMogg.html');
   // await page.goto('http://practisemaster.com/demos/puppeteerBrowserError.html');
-  
   
   
   
