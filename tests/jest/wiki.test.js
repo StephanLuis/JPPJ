@@ -8,7 +8,7 @@ describe('Wiki', () => {
     await page.goto('https://wikipedia.com')
   })
 
-  it('should display "Wikipedia" text on page', async () => {
+  it('Should display "Wikipedia" text on page', async () => {
     await expect(page).toMatch('Wikipedia')
   })
 })

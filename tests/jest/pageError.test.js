@@ -2,18 +2,17 @@
 
 // const puppeteer = require('puppeteer');
 const puppeteer = require('expect-puppeteer');
-var err = 'bob';
+var refErrtxt = 'bob';
 
-describe('RequestFailed', () => {
+describe('PageError', () => {
   beforeAll(async () => {
 
     // page.on('console', msg => console.log('PAGE LOG:', msg.text)); 
 
-    //  page.on('pageerror', error => { err = error.message; });
 
-    page.on('requestfailed', request => {
-      console.log(request.failure().errorText, request.url);
-      err = request.failure().errorText;
+    page.on('pageerror', refErr => {
+      console.log(refErr.message);
+      refErrtxt = refErr.message;
     });
 
 
@@ -28,7 +27,7 @@ describe('RequestFailed', () => {
 
   })
 
-  it('should not detect a requestfailed on page', async () => {
-    await expect(err).toMatch('');
+  it('should not detect an Error on page', async () => {
+    await expect(refErrtxt).toMatch('');
   })
 })
